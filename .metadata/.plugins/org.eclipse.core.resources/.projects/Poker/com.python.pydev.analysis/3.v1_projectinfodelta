@@ -1,0 +1,11 @@
+INSTUPCard
+C:\Users\Diego\Documents\ProjetosEclipse\UniPoker\Poker\src\Card.py
+INFOS:&&1|1|1|0&&3|2|1|1&&3|3|1|1&&2|4|1|0&&2|5|1|0&&2|6|1|0&&2|7|1|0&&2|8|1|0
+__lt__=8
+RANKS=2
+getRank=5
+getSuit=6
+__str__=7
+__init__=4
+Card=1
+SUITS=3
