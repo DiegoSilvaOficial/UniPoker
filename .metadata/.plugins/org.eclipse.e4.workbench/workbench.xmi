@@ -9,7 +9,7 @@
     <persistedState key="isRestored" value="true"/>
     <persistedState key="show_in_time" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;show_in_time/>"/>
     <persistedState key="workingSets" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;workingSets/>"/>
-    <persistedState key="aggregateWorkingSetId"/>
+    <persistedState key="aggregateWorkingSetId" value="Aggregate for window 1457837607387"/>
     <tags>topLevel</tags>
     <children xsi:type="basic:PartSashContainer" xmi:id="_AMeNIOjEEeWC_bM08__dGw" selectedElement="_AMe0MOjEEeWC_bM08__dGw" horizontal="true">
       <children xsi:type="advanced:PerspectiveStack" xmi:id="_AMe0MOjEEeWC_bM08__dGw" elementId="org.eclipse.ui.ide.perspectivestack" containerData="7500" selectedElement="_tPdeoOjFEeWC_bM08__dGw">
@@ -140,7 +140,7 @@
             <children xsi:type="basic:PartStack" xmi:id="_tPdeoujFEeWC_bM08__dGw" elementId="topLeft" containerData="2600" selectedElement="_tPdeo-jFEeWC_bM08__dGw">
               <children xsi:type="advanced:Placeholder" xmi:id="_tPdeo-jFEeWC_bM08__dGw" elementId="org.python.pydev.navigator.view" ref="_tPVi0OjFEeWC_bM08__dGw"/>
             </children>
-            <children xsi:type="basic:PartSashContainer" xmi:id="_tPdepOjFEeWC_bM08__dGw" containerData="7400" selectedElement="_tPdepujFEeWC_bM08__dGw">
+            <children xsi:type="basic:PartSashContainer" xmi:id="_tPdepOjFEeWC_bM08__dGw" containerData="7400" selectedElement="_tPdepejFEeWC_bM08__dGw">
               <children xsi:type="advanced:Placeholder" xmi:id="_tPdepejFEeWC_bM08__dGw" elementId="org.eclipse.ui.editorss" containerData="7500" ref="_AourUOjEEeWC_bM08__dGw"/>
               <children xsi:type="basic:PartStack" xmi:id="_tPdepujFEeWC_bM08__dGw" elementId="bottom" containerData="2500" selectedElement="_tPdeqOjFEeWC_bM08__dGw">
                 <children xsi:type="advanced:Placeholder" xmi:id="_tPdep-jFEeWC_bM08__dGw" elementId="org.eclipse.search.ui.views.SearchView" toBeRendered="false" ref="_AsABwujEEeWC_bM08__dGw"/>
@@ -284,7 +284,7 @@
       <tags>categoryTag:Mylyn</tags>
     </sharedElements>
     <sharedElements xsi:type="basic:Part" xmi:id="_tPVi0OjFEeWC_bM08__dGw" elementId="org.python.pydev.navigator.view" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="PyDev Package Explorer" iconURI="platform:/plugin/org.python.pydev/icons/pydev_package_explorer.gif" tooltip="" closeable="true">
-      <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;view CommonNavigator.LINKING_ENABLED=&quot;0&quot; org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets=&quot;0&quot;>&#xD;&#xA;&lt;expanded IMemento.internal.id=&quot;C:/Users/Diego/Documents/ProjetosEclipse/UniPoker/Poker&quot;/>&#xD;&#xA;&lt;expanded IMemento.internal.id=&quot;C:/Users/Diego/Documents/ProjetosEclipse/UniPoker/Poker/src&quot;/>&#xD;&#xA;&lt;selected IMemento.internal.id=&quot;C:/Users/Diego/Documents/ProjetosEclipse/UniPoker/Poker/src&quot;/>&#xD;&#xA;&lt;/view>"/>
+      <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;view CommonNavigator.LINKING_ENABLED=&quot;0&quot; currentWorkingSetName=&quot;Aggregate for window 1457837607387&quot; org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets=&quot;0&quot;>&#xD;&#xA;&lt;expanded IMemento.internal.id=&quot;C:/Users/Diego/Documents/ProjetosEclipse/UniPoker/Poker&quot;/>&#xD;&#xA;&lt;expanded IMemento.internal.id=&quot;C:/Users/Diego/Documents/ProjetosEclipse/UniPoker/Poker/src&quot;/>&#xD;&#xA;&lt;selected IMemento.internal.id=&quot;C:/Users/Diego/Documents/ProjetosEclipse/UniPoker/Poker/src&quot;/>&#xD;&#xA;&lt;/view>"/>
       <tags>View</tags>
       <tags>categoryTag:PyDev</tags>
       <menus xmi:id="_tQYEoOjFEeWC_bM08__dGw" elementId="org.python.pydev.navigator.view">
@@ -300,7 +300,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_ASv0QOjEEeWC_bM08__dGw" elementId="org.eclipse.ui.workbench.file">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_ATLSEOjEEeWC_bM08__dGw" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" enabled="false" command="__WHM8ejDEeWC_bM08__dGw"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_vfSWwOjGEeWsdamBUT1-oQ" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="__WHM8ejDEeWC_bM08__dGw"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_ASwbUOjEEeWC_bM08__dGw" elementId="additions" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -333,7 +333,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_ASxCYOjEEeWC_bM08__dGw" elementId="org.eclipse.ui.workbench.navigate">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_ATPjgOjEEeWC_bM08__dGw" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="__WEwvOjDEeWC_bM08__dGw"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_vfbgsOjGEeWsdamBUT1-oQ" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="__WEwvOjDEeWC_bM08__dGw"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_ASxpcOjEEeWC_bM08__dGw" elementId="group.editor" toBeRendered="false">
         <tags>toolbarSeparator</tags>
