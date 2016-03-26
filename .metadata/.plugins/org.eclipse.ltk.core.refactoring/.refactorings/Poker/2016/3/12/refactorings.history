@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;Poker/src/Baralho&apos; to &apos;Baralho.py&apos;" description="Rename resource &apos;Baralho&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/Baralho" name="Baralho.py" stamp="1457837209922" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;Poker/src/Deck&apos; to &apos;Deck.py&apos;" description="Rename resource &apos;Deck&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/Deck" name="Deck.py" stamp="1457840361059" updateReferences="true"/>
+</session>

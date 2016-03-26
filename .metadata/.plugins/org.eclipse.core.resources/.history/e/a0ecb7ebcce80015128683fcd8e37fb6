@@ -1,0 +1,35 @@
+import random
+
+class Card:
+    """A card object with a suit and rank."""
+    RANKS = (2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14)
+    SUITS = ('Spades', 'Diamonds', 'Hearts', 'Clubs')
+
+def __init__(self, rank, suit):
+    """creates cared with rank and suit"""
+    self._rank = rank
+    self._suit = suit
+
+def getRank(self):
+    """return rank of card"""
+    return self._rank
+
+def getSuit(self):
+    """return suit of card"""
+    return self._suit
+
+def __str__(self):
+    """returns string representing card's value"""
+    #Create dictionary for face cards
+    translate = {11:'Jack', 12:'Queen', 13:'King', 14: 'Ace'}
+    r = self._rank
+    #check for face card
+    if r in [11, 12, 13, 14]:
+        myrank = translate[r]
+    else:
+        myrank = str(r)
+    return myrank + " of " + self._suit
+
+
+def __lt__(self, other):
+    return( self._rank < other.getRank() )
