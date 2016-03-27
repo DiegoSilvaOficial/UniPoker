@@ -1,21 +1,7 @@
 from tkinter import *
 
-from baralho import Baralho, Carta
 from util import ToggleButton, ButtonRadio, RadioGroup, Table, Util
-
-b=Baralho()
-
-class Mao(object):
-    
-    cartas = []
-    
-    def __init__(self):
-        self.cartas = [None, None, None, None, None]
-    
-    def pegar_cartas(self):
-        for i in range(5):
-            self.cartas[i] = b.puxar()
-        print(self.cartas)
+from mao import Mao
 
 class Jogo(Tk):
 
@@ -97,21 +83,57 @@ class Jogo(Tk):
         self.draw_bet()
         self.draw_paid(0.0)
         
-        self.deal = Button(self, text="Deal", command=self.deal, highlightbackground='#000', activebackground="#111", activeforeground="#DDD", relief=FLAT, bg='#333', fg="#DDD", font=("Mono", 15))
-        self.deal.place(x=785, y=585, width=100, height=40,anchor=SE)
+        self.btn_deal = Button(self, text="Deal", command=self.deal, highlightbackground='#000', activebackground="#111", activeforeground="#DDD", relief=FLAT, bg='#333', fg="#DDD", font=("Mono", 15))
+        self.btn_deal.place(x=785, y=585, width=100, height=40,anchor=SE)
         
     def deal(self):
         if self.passo == 0:
+            self.credito -= (self.rx.selected()*self.rg.selected())
+            self.draw_credit()
             self.destroy_images()
+            self.mao.embaralhar()
             self.mao.pegar_cartas()
             self.draw_images()
-            self.destroy_holds()
             self.create_holds()
+            self.rg.toggle_lock()
+            self.rx.toggle_lock()
             self.passo+=1
-         elif self.passo:
+        elif self.passo == 1:
+            for i in range(5):
+                if not self.holds[i].value:
+                    self.mao.cartas[i] = None
+            self.destroy_images()
+            self.mao.pegar_cartas()
+            self.destroy_holds()
+            self.destroy_images()
+            self.draw_images()
+            retorno = self.mao.combinacao()
+            if retorno != None:
+                t = Util.maos[retorno][0]
+                multiplo = Util.maos[retorno][self.rx.selected()]
+                valor = self.rg.selected()
+                total = (valor*multiplo)
+                self.credito += total
+                self.draw_paid(float(total))
+                self.draw_credit()
+            else:
+                t = "No Win"
+            self.l = Label(self, text=t,bg='#2F736A', fg="#FFFFFF", font=("Mono", 15))
+            self.l.place(relx=0.5, y=30, anchor=CENTER, width=300, height=50)
+            self.passo += 1
+        elif self.passo == 2:
+            self.l.destroy()
+            self.draw_paid(0.0)
+            self.rg.toggle_lock()
+            self.rx.toggle_lock()
+            self.mao.devolver()
+            self.destroy_images()
+            self.draw_images()
+            self.passo = 0
+            
     
     def draw_credit(self):
-        self.label_credito.config(text="Crédito: $ %.2f" % self.credito)
+        self.label_credito.config(text="Money: $ %.2f" % self.credito)
         
     def draw_bet(self):
         self.label_bet.configure(text="Bet:  $ %.2f" % (self.rg.selected() * self.rx.selected()))
@@ -152,4 +174,5 @@ class Jogo(Tk):
     def destroy_holds(self):
         for hold in self.holds:
             hold.destroy()
+        self.holds = []
         

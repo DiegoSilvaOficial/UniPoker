@@ -24,12 +24,12 @@ class Carta(object):
         return self.valor > other
 
 class Baralho(object):
-    
-    cartas = []
-    
+
     def __init__(self):
-        [[self.cartas.append(Carta(valor, naipe)) for valor in valores] for naipe in naipes]
+        self.cartas = [(Carta(valor, 'd')) for valor in valores]
+        self.cartas += [(Carta(valor, 'h')) for valor in valores]
+        self.cartas += [(Carta(valor, 'c')) for valor in valores]
+        self.cartas += [(Carta(valor, 's')) for valor in valores]
 
     def puxar(self):
-        print(len(self.cartas))
         return self.cartas.pop(random.randint(0, len(self.cartas)-1))

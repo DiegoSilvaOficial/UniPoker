@@ -4,6 +4,7 @@ class Inicio(Tk):
 
     def __init__(self,parent):
         Tk.__init__(self,parent)
+        self.resizable(False, False)
         self.protocol("WM_DELETE_WINDOW", sys.exit)
         self.parent = parent
         self.initialize()

@@ -13,7 +13,7 @@ class Util(object):
             ["Straight", 4, 8, 12, 16, 20],
             ["Three of a Kind", 3, 6, 9, 12, 15],
             ["Two Pair", 2, 4, 6, 8, 10],
-            ["Jacks or Better", 1, 2, 3, 4, 5]]
+            ["Pair", 1, 2, 3, 4, 5]]
     
 class Table(object):
     def __init__(self,pai, dados, x, y):
@@ -22,7 +22,7 @@ class Table(object):
         self.x = x
         self.y = y
         
-    def draw(self):
+    def draw(self, big=False):
         for i in range(len(self.dados)):
             x = self.x
             for j in range(len(self.dados[i])):
@@ -32,6 +32,8 @@ class Table(object):
                 else:
                     color = "#CCC"
                     width = 85
+                if big:
+                    width = 250
                 f = Frame(self.pai, height=20, width=width)
                 f.pack_propagate(0) # don't shrink
                 f.place(x=x, y=self.y)
@@ -46,12 +48,16 @@ class RadioGroup(object):
         self.radios = []
         self.values = []
         self.atualize = atualize
+        self.lock = False
     
     def selected(self):
         for i in range(len(self.radios)):
             if self.radios[i].selected:
                 return self.values[i]
         return None
+    
+    def toggle_lock(self):
+        self.lock = not self.lock
     
     def add(self, radio, value):
         radio.configure(command=self.comando(radio))
@@ -60,7 +66,7 @@ class RadioGroup(object):
         
     def comando(self,radio):
         def retorno():
-            if not radio.selected:
+            if not radio.selected and not self.lock:
                 for i in self.radios:
                     if i.selected:
                         i.deselect()

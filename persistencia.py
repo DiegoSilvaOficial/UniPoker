@@ -15,10 +15,10 @@ class Persistencia(object):
     def escrever(self, ranking):
         try:
             with open(self.arquivo, 'w') as f:
-                fieldnames = ['first_name', 'last_name']
+                fieldnames = ['nome', 'credito', 'seed']
                 writer = csv.DictWriter(f, fieldnames=fieldnames)
-
-                writer.writerow({'first_name': 'Baked', 'last_name': 'Beans'})
+                for i in ranking:                
+                    writer.writerow({'nome': i[0], 'credito': i[1], 'seed':i[2]})
         except IOError as e:
             print("Não foi possível escrever no arquivo {}".format(arquivo))
         finally:
